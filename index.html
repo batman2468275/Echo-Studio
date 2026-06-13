@@ -6,6 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Echo Studio — Turn one podcast episode into a week of social content</title>
 <meta name="description" content="Premium content repurposing for B2B podcasters. We turn each episode into 70+ pieces of social content. By Astrofield.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 60'%3E%3Crect width='60' height='60' fill='%23161618'/%3E%3Ccircle cx='30' cy='30' r='7' fill='none' stroke='%23C7F23F' stroke-width='3.5'/%3E%3Ccircle cx='30' cy='30' r='15' fill='none' stroke='%23C7F23F' stroke-width='3' opacity='0.6'/%3E%3Ccircle cx='30' cy='30' r='23' fill='none' stroke='%23C7F23F' stroke-width='2.5' opacity='0.3'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,400;1,9..144,500&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -63,15 +64,10 @@
     background: transparent; border: none; cursor: pointer;
   }
   .logo-mark {
-    width: 28px; height: 28px;
-    position: relative; display: inline-block;
+    display: inline-block;
+    flex-shrink: 0;
+    vertical-align: middle;
   }
-  .logo-mark::before, .logo-mark::after {
-    content: ''; position: absolute;
-    border: 1.5px solid var(--lime);
-    border-radius: 50%; inset: 0;
-  }
-  .logo-mark::after { inset: 6px; border-color: var(--bone); opacity: 0.5; }
   .nav-parent {
     font-family: 'JetBrains Mono', monospace;
     font-size: 11px; letter-spacing: 0.15em;
@@ -835,7 +831,7 @@
 <!-- ===== NAV ===== -->
 <nav>
   <button class="logo" onclick="showPage('home')">
-    <span class="logo-mark"></span>
+    <svg class="logo-mark" width="30" height="30" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" aria-label="Echo Studio"><circle cx="30" cy="30" r="7" fill="none" stroke="#C7F23F" stroke-width="3.5"/><circle cx="30" cy="30" r="15" fill="none" stroke="#C7F23F" stroke-width="3" opacity="0.6"/><circle cx="30" cy="30" r="23" fill="none" stroke="#C7F23F" stroke-width="2.5" opacity="0.3"/></svg>
     Echo Studio
     <span class="nav-parent">— by Astrofield</span>
   </button>
@@ -843,6 +839,8 @@
     <button class="nav-link" data-page="work">Work</button>
     <button class="nav-link" data-page="process">Process</button>
     <button class="nav-link" data-page="pricing">Pricing</button>
+    <button class="nav-link" data-page="refunds">Refunds</button>
+    <button class="nav-link" data-page="about">About</button>
     <button class="nav-link" data-page="faq">FAQ</button>
     <button class="btn book-btn">Book a call</button>
   </div>
@@ -1234,6 +1232,94 @@
 
 </div><!-- end page-pricing -->
 
+<!-- ===== PAGE: ABOUT ===== -->
+<div class="page" id="page-about">
+
+  <section id="about" class="problem reveal" style="padding-top: 220px;">
+    <div class="section-inner">
+      <div class="section-eyebrow">About</div>
+      <h2>About the team behind <em>Echo</em>.</h2>
+      <p class="section-sub">Who we are, why we started, and how we think about your content.</p>
+      <div style="max-width: 720px; font-size: 17px; line-height: 1.7; color: var(--bone-dim);">
+        <p style="margin-bottom: 28px;">When you start a B2B podcast, the hardest part isn't recording — it's getting your episodes in front of more people. You can pour hours into a great conversation, but if it only lives as one audio file that a few hundred people hear, most of its value never reaches anyone. That's where Echo Studio comes in. We take the episodes you've already made and turn them into LinkedIn carousels, posts, and short-form clips, each one pulled directly from your own conversations and built to actually get noticed. Everything we create goes into a shared Google Drive folder, organized and ready to go — and you decide exactly when and where to post it.</p>
+        <p style="margin-bottom: 28px;">Thousands of creators pour real energy into podcasts they care about, but most never get the support they need to turn that work into reach. We're here to provide it. For a fraction of what a large agency charges, we deliver a full week of content from every single episode — clips, carousels, and posts designed for the platforms your audience actually uses. The goal is simple: make sure your best ideas travel far beyond the people who caught the original episode. You stay focused on what you do best — producing great conversations — while we handle the work of turning each one into a week of content. All you have to do is approve what we create.</p>
+        <p>Here's the "us" part: we're a team of four young creators and editors who are always making something. Whenever we get the chance, we're taking photos, shooting videos, and editing it all into something worth watching. We know what makes a clip land and what makes a post get scrolled past, because it's the craft we've put real time into. We started Echo Studio to help new B2B podcasters grow — creators just like you, working to build something real out of what they love. Our mission is simple: support you at every step of your content journey, and turn the episodes you've already made into the audience you've been working toward.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section reveal">
+    <div class="cta-inner">
+      <div class="section-eyebrow" style="justify-content: center; display: flex;">Work with us</div>
+      <h2 class="cta-headline">Let's <em>build something</em> together.</h2>
+      <p class="cta-sub">Book a 20-minute call and we'll show you what your last episode looks like as 10 pieces of content — at no cost.</p>
+      <div class="cta-buttons">
+        <button class="btn btn-large book-btn">Book a 20-min call</button>
+        <button class="btn btn-ghost btn-large email-btn"><span class="email-btn-text">Or email us directly</span></button>
+      </div>
+    </div>
+  </section>
+
+</div><!-- end page-about -->
+
+<!-- ===== PAGE: REFUNDS ===== -->
+<div class="page" id="page-refunds">
+
+  <div class="page-hero">
+    <div class="page-hero-bg"><div class="page-hero-grid"></div></div>
+    <div class="page-hero-content">
+      <div class="section-eyebrow">Refunds & cancellation</div>
+      <h1>Fair, simple, and in plain <em>English</em>.</h1>
+      <p class="hero-sub">No fine print, no gotchas. Here's exactly how refunds and cancellation work.</p>
+    </div>
+  </div>
+
+  <section class="reveal">
+    <div class="section-inner">
+      <div class="deliverables-grid">
+        <div class="deliverable-card">
+          <div class="deliverable-num">01 / First-month grace</div>
+          <h3 class="deliverable-title">Your first payment is protected</h3>
+          <p class="deliverable-desc">New clients get a 3-day window from their first payment to change their mind. If you decide Echo Studio isn't right within those first 3 days and we haven't started work yet, we refund your first payment in full — no questions asked. Once we've begun your first batch, that payment is non-refundable.</p>
+        </div>
+        <div class="deliverable-card">
+          <div class="deliverable-num">02 / Ongoing billing</div>
+          <h3 class="deliverable-title">Renewals are non-refundable</h3>
+          <p class="deliverable-desc">Billing is monthly and upfront, before work begins. After your first month, each monthly payment is final. We commit production time the moment your payment clears, so we don't refund renewals.</p>
+        </div>
+        <div class="deliverable-card">
+          <div class="deliverable-num">03 / Leaving</div>
+          <h3 class="deliverable-title">Cancel anytime, no penalties</h3>
+          <p class="deliverable-desc">No long-term contracts, no termination fees. Send written notice (email is fine) to stop future billing. You'll finish out the month you've already paid for and receive all its content — then the engagement simply ends. If you cancel partway through a paid month, you keep receiving content through the end of that month.</p>
+        </div>
+        <div class="deliverable-card">
+          <div class="deliverable-num">04 / Quality issues</div>
+          <h3 class="deliverable-title">If you're unhappy with a batch</h3>
+          <p class="deliverable-desc">Every batch includes 2 rounds of revisions, so if something misses the mark, we fix it. Beyond that we handle concerns case-by-case — our default is always to make the work right rather than offer cash back.</p>
+        </div>
+        <div class="deliverable-card">
+          <div class="deliverable-num">05 / Ownership</div>
+          <h3 class="deliverable-title">You always keep your content</h3>
+          <p class="deliverable-desc">Everything we deliver is yours to keep forever, even after you cancel. The files stay in your shared folder, and you're free to use, edit, and post them however you like.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section reveal">
+    <div class="cta-inner">
+      <div class="section-eyebrow" style="justify-content: center; display: flex;">Any questions?</div>
+      <h2 class="cta-headline">We're <em>happy to walk you through it</em>.</h2>
+      <p class="cta-sub">If anything's still unclear, just book a call or email us. We'd rather over-explain upfront than have any surprises later.</p>
+      <div class="cta-buttons">
+        <button class="btn btn-large book-btn">Book a 20-min call</button>
+        <button class="btn btn-ghost btn-large email-btn"><span class="email-btn-text">Or email us directly</span></button>
+      </div>
+    </div>
+  </section>
+
+</div><!-- end page-refunds -->
+
 <!-- ===== PAGE: FAQ ===== -->
 <div class="page" id="page-faq">
 
@@ -1300,7 +1386,7 @@
   <div class="footer-inner">
     <div class="footer-brand">
       <button class="logo" onclick="showPage('home')">
-        <span class="logo-mark"></span>
+        <svg class="logo-mark" width="30" height="30" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" aria-label="Echo Studio"><circle cx="30" cy="30" r="7" fill="none" stroke="#C7F23F" stroke-width="3.5"/><circle cx="30" cy="30" r="15" fill="none" stroke="#C7F23F" stroke-width="3" opacity="0.6"/><circle cx="30" cy="30" r="23" fill="none" stroke="#C7F23F" stroke-width="2.5" opacity="0.3"/></svg>
         Echo Studio
       </button>
       <p class="footer-tagline">Premium content repurposing for B2B podcasters who refuse to let great work disappear into the feed.</p>
