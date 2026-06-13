@@ -1057,7 +1057,7 @@
       <p class="cta-sub">Book a 20-minute call and we'll show you exactly what your most recent episode looks like as 10 pieces of content — before you commit to anything.</p>
       <div class="cta-buttons">
         <button class="btn btn-large book-btn">Book a 20-min call</button>
-        <button class="btn btn-ghost btn-large" onclick="showPage('pricing')">View pricing</button>
+        <button class="btn btn-ghost btn-large" onclick="showPage('process')">Next: Process</button>
       </div>
     </div>
   </section>
@@ -1139,7 +1139,7 @@
       <p class="cta-sub">Book a 20-minute call and we'll walk you through the exact process with your show — and show you a free sample from your most recent episode.</p>
       <div class="cta-buttons">
         <button class="btn btn-large book-btn">Book a 20-min call</button>
-        <button class="btn btn-ghost btn-large" onclick="showPage('pricing')">View pricing</button>
+        <button class="btn btn-ghost btn-large" onclick="showPage('pricing')">Next: Pricing</button>
       </div>
     </div>
   </section>
@@ -1225,7 +1225,7 @@
       <p class="cta-sub">Book a 20-minute call. We'll show you what your last episode looks like as 10 pieces of content — at no cost — so you can judge the quality before you ever sign.</p>
       <div class="cta-buttons">
         <button class="btn btn-large book-btn">Book a 20-min call</button>
-        <button class="btn btn-ghost btn-large email-btn"><span class="email-btn-text">Or email us directly</span></button>
+        <button class="btn btn-ghost btn-large" onclick="showPage('refunds')">Next: Refunds</button>
       </div>
     </div>
   </section>
@@ -1255,7 +1255,7 @@
       <p class="cta-sub">Book a 20-minute call and we'll show you what your last episode looks like as 10 pieces of content — at no cost.</p>
       <div class="cta-buttons">
         <button class="btn btn-large book-btn">Book a 20-min call</button>
-        <button class="btn btn-ghost btn-large email-btn"><span class="email-btn-text">Or email us directly</span></button>
+        <button class="btn btn-ghost btn-large" onclick="showPage('faq')">Next: FAQ</button>
       </div>
     </div>
   </section>
@@ -1313,7 +1313,7 @@
       <p class="cta-sub">If anything's still unclear, just book a call or email us. We'd rather over-explain upfront than have any surprises later.</p>
       <div class="cta-buttons">
         <button class="btn btn-large book-btn">Book a 20-min call</button>
-        <button class="btn btn-ghost btn-large email-btn"><span class="email-btn-text">Or email us directly</span></button>
+        <button class="btn btn-ghost btn-large" onclick="showPage('about')">Next: About</button>
       </div>
     </div>
   </section>
@@ -1415,8 +1415,10 @@
       btn.classList.toggle('active', btn.getAttribute('data-page') === name);
     });
 
-    // Scroll to top
-    window.scrollTo({ top: 0, behavior: 'instant' });
+    // Scroll to top (every page opens from the top)
+    window.scrollTo(0, 0);
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
 
     // Re-run scroll-reveal on newly visible elements
     document.querySelectorAll('#page-' + name + ' .reveal:not(.visible)').forEach(el => {
